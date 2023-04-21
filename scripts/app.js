@@ -6,14 +6,17 @@ document.querySelector(".currentYear").textContent = year;
 
 // Last Updated
 let lastModif = new Date(document.lastModified);
-let dayModif = lastModif.getDay();
-let monthModif = lastModif.getMonth();
+let dayModif = lastModif.toLocaleString("en-US", {day: "numeric"});
+let monthModif = lastModif.toLocaleString("en-US", {month: "numeric"});
 let yearModif = lastModif.getFullYear();
 let hoursModif = lastModif.getHours();
 let minutesModif = lastModif.getMinutes();
 let secondsModif = lastModif.getSeconds();
 
-let fullDateModif = `${dayModif}/${monthModif}/${yearModif} ${hoursModif}:${minutesModif}:${secondsModif}`;
+let fullDateModif = `${monthModif}/${dayModif}/${yearModif} ${hoursModif}:${minutesModif}:${secondsModif}`;
 
+console.log(lastModif);
+console.log(dayModif);
+console.log(monthModif);
 document.querySelector(".date-modification").textContent = fullDateModif;
 
