@@ -124,7 +124,6 @@ th, td {
 th {
 	background-color: #f2f2f2;
 }
-
 .container tr td .header-typography {
     font-size: 40px;
     background-color: var(--header-bg-color);
@@ -167,12 +166,34 @@ tr td h1 {
 .personas {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 10px;
     margin-top: 30px;
 }
 .personas p {
     font-size: 1em;
     text-align: justify;
+}
+.box {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 10px;
+}
+.box p {
+    margin: 0 auto;
+    text-align: left;
+    font-size: 0.9em;
+}
+.box img {
+    width: 150px;
+    object-fit: cover;
+    object-position: top;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 14px 14px hsl(355deg 25% 15% / 10%);
+}
+.persona-information{
+    margin: auto 0;
+    padding: 10px;
 }
 
 /* Responsive */
@@ -195,8 +216,35 @@ tr td h1 {
     .logo h1 {
         font-size: 1.4em;
     }
+    .box {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-gap: 5px;
+    }
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+    .box h3 {
+        font-size: 1em;
+    }
 }
 
+/* Target audience */
+@media (max-width: 750px) {
+    .personas {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+    .box {
+        grid-template-columns: 1fr;
+    }
+    .persona-information{
+        margin-bottom: 15px;
+        padding: 0px;
+    }
+}
+ 
 @media (max-width: 600px) {
     nav ul {
         margin-top: 15px;
@@ -251,6 +299,15 @@ tr td h1 {
         text-align: left;
         height: auto;
         padding-left: 10px;
+    }
+
+    @media (max-width: 450px) {
+        .personas {
+            font-size: 0.9em;
+        }
+        .box p {
+            text-align: justify;
+        }
     }
 }
 
