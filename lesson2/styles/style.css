@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/* variables */
+:root {
+	--container-color: #1d3557;
+	--second-color: #0096C7;
+	--text-color: #1B263B;
+	--bg-color: #f9f9f9;
+}
+* {
+    font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+header{
+    display: grid;
+    text-align: center;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+	max-width: 1250px;
+    margin: 0 auto;
+}
+header h1{
+    font-size: 3em;
+}
+header h2{
+    font-size: 2em;
+}
+.container{
+	max-width: 1300px;
+    margin: 20px auto;
+	width: 100%;
+    justify-content: center;
+}
+.principles{
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-gap: 20px;
+    text-align: center;
+}
+.principle-img{
+    width: 370px;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.principle-title{
+    background-color: var(--container-color);
+    color: var(--bg-color);
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+}
+.principle-box{
+    background-color: rgb(233, 233, 233);
+    padding: 20px 0;
+}
+h3{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 8px;
+}
+p{
+    text-align: justify;
+    margin: 15px;
+    font-size: 1.2em;
+}
+
+/* responsive */
+@media (max-width: 1300px) {
+    .principles {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .principle-content {
+        flex: 1;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    header h1{
+        font-size: 2em;
+    }
+    header h2{
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 450px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .principle-img{
+        width: 300px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
