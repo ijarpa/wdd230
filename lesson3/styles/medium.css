@@ -1,0 +1,78 @@
+/* Responsive */
+@media (max-width: 900px) {
+    .header-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    nav ul {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul li {
+        margin: 4px;
+    }
+    .logo h1 {
+        font-size: 1.4em;
+    }
+    .box {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-gap: 5px;
+    }
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+    .box h3 {
+        font-size: 1em;
+    }
+}
+
+/* Target audience */
+@media (max-width: 750px) {
+    .personas {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+    .box {
+        grid-template-columns: 1fr;
+    }
+    .persona-information{
+        margin-bottom: 15px;
+        padding: 0px;
+    }
+}
+
+@media (max-width: 650px) {
+    /* Design page */
+    table thead tr {
+        display: none;
+    }
+    table tr {
+        display: block;
+    }
+    table th, table td {
+        padding: .5em;
+    }
+    table td {
+        text-align: right;
+        display: block;
+        font-size: 1em;
+    }
+    table td::before {
+        content: attr(data-title) ": ";
+        float: left;
+    }
+    tbody tr:nth-child(even) {
+        background-color: var(--header-second-color);
+    }
+    th, td {
+        text-align: left;
+        height: auto;
+        padding-left: 10px;
+    }
+}
