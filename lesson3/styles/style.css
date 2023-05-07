@@ -179,9 +179,10 @@ tr td h1 {
     grid-gap: 10px;
 }
 .box p {
-    margin: 0 auto;
+    margin-top: 0;
     text-align: left;
     font-size: 0.9em;
+    margin-bottom: 20px;
 }
 .box img {
     width: 150px;
