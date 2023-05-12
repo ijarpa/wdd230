@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* variables */
+:root {
+    --header-bg-color: #273C75;
+    --header-color: #FFFFFF;
+    --header-second-color: #F5F6FA;
+    --contrast-color: #0097E6;
+	--second-color: #146AAE;
+}
+
+/* header style */
+body {
+	font-family: 'Poppins', sans-serif;
+}
+header {
+	padding: 20px 50px;
+	background-color: var(--header-bg-color);
+	color: #fff;
+}
+#header-content {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+}
+#header-content img {
+    width: 200px;
+}
+#header-title {
+    margin: auto;
+}
+#header-title h1, p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+#header-content h1 {
+    font-size: 1.5em;
+}
+/* Navigation bar */
+nav {
+    margin: auto;
+    justify-content: space-between;
+}
+.navigation {
+	display: flex;
+	list-style: none;
+}
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+    padding: 7px;
+}
+nav ul li a:hover {
+	color: #a5b1c2;
+}
+.header-icons {
+    margin: auto;
+}
+#header-content .header-icons img {
+    width: 24px;
+}
+.header-date {
+    max-width: 1080px;
+    margin: auto;
+    text-align: center;
+    background-color: var(--second-color);
+    padding: 8px;
+    border-radius: 5px;
+    border: var(--contrast-color) 1px solid;
+}
+a {
+    text-decoration: none;
+}
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@media (max-width: 960px) {
+    .navigation {
+        position: fixed;
+        /* left: -100%; */
+        opacity: 0;
+        gap: 0;
+        flex-direction: column;
+      }
+      .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      .navigation.active {
+        left: 0;
+        opacity: 100;
+        width: 100%;
+        background-color: var(--header-bg-color);
+        text-align: center;
+        transition: all 0.3s;
+        padding: 0;
+      }
+      .navigation li {
+        background-color: var(--header-bg-color);
+        padding: 15px;
+        margin: auto;
+        width: 100%;
+        border-bottom: #146AAE 1px solid;
+      }
+      .navigation li:hover {
+        background-color: var(--second-color);
+        transition: all 0.3s;
+      }
+}

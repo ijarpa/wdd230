@@ -1,0 +1,45 @@
+const d = new Date();
+const year = d.getFullYear();
+console.log(year);
+document.querySelector(".current-date").textContent = year;
+
+// current date
+const date = new Date();
+
+const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+    };
+    
+const day = date.toLocaleDateString("en-US", options);
+document.querySelector(".current-date").textContent = new Date().toLocaleDateString("en-US", options);
+
+
+// Last Updated
+let lastModif = new Date(document.lastModified);
+let dayModif = lastModif.toLocaleString("en-US", {day: "numeric"});
+let monthModif = lastModif.toLocaleString("en-US", {month: "numeric"});
+let yearModif = lastModif.getFullYear();
+let hoursModif = lastModif.getHours();
+let minutesModif = lastModif.getMinutes();
+let secondsModif = lastModif.getSeconds();
+
+let fullDateModif = `${monthModif}/${dayModif}/${yearModif} ${hoursModif}:${minutesModif}:${secondsModif}`;
+
+console.log(lastModif);
+console.log(dayModif);
+console.log(monthModif);
+// document.querySelector(".current-date").textContent = fullDateModif;
+
+
+// hamburger menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".navigation");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
