@@ -1,7 +1,9 @@
 const d = new Date();
 const year = d.getFullYear();
 console.log(year);
-document.querySelector(".current-date").textContent = year;
+
+// current year
+document.querySelector(".year").textContent = year;
 
 // current date
 const date = new Date();
@@ -15,7 +17,6 @@ const options = {
     
 const day = date.toLocaleDateString("en-US", options);
 document.querySelector(".current-date").textContent = new Date().toLocaleDateString("en-US", options);
-
 
 // Last Updated
 let lastModif = new Date(document.lastModified);
@@ -31,7 +32,7 @@ let fullDateModif = `${monthModif}/${dayModif}/${yearModif} ${hoursModif}:${minu
 console.log(lastModif);
 console.log(dayModif);
 console.log(monthModif);
-// document.querySelector(".current-date").textContent = fullDateModif;
+document.querySelector(".date-modification").textContent = fullDateModif;
 
 
 // hamburger menu
