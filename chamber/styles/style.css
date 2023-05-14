@@ -119,6 +119,10 @@ a {
 }
 
 /* Footer */
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+}
 .footer {
     display: flex;
 }
@@ -133,7 +137,7 @@ a {
     margin: 5px 0;
 }
 .footer-info {
-    text-align: center;
+    text-align: end;
     margin: auto;
 }
 .footer-info a {
