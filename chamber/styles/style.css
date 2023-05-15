@@ -117,6 +117,9 @@ a {
     padding: 15px;
     background-color: #d6d6d6;
 }
+.post-box p {
+    padding-left: 10px;
+}
 
 /* Footer */
 .footer-content {
