@@ -18,6 +18,20 @@ const options = {
 const day = date.toLocaleDateString("en-US", options);
 document.querySelector(".current-date").textContent = new Date().toLocaleDateString("en-US", options);
 
+// current day
+const dayName = date.toLocaleDateString("en-US", { weekday: "long"});
+console.log(dayName);
+
+// announcement banner
+if (dayName === "Monday" || dayName === "Tuesday") {
+    document.querySelector(".header").style.paddingTop = "20px";
+}
+else {
+    console.log("Otro dia");
+    document.querySelector(".announcement").style.display = "none";
+}
+
+
 // Last Updated
 let lastModif = new Date(document.lastModified);
 let dayModif = lastModif.toLocaleString("en-US", {day: "numeric"});

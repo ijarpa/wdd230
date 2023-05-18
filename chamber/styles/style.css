@@ -8,12 +8,25 @@
     --contrast-color: #0097E6;
 	--second-color: #146AAE;
 }
+
+/* announcement banner */
+.announcement {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 9999;
+  }
+
 /* header style */
 body {
 	font-family: 'Poppins', sans-serif;
 }
 header, footer{
-	padding: 20px 50px;
 	background-color: var(--header-bg-color);
 	color: #fff;
 }
@@ -38,6 +51,7 @@ header, footer{
 .content h1 {
     font-size: 1.5em;
 }
+
 /* Navigation bar */
 nav {
     margin: auto;
@@ -281,7 +295,7 @@ a {
 
 @media (max-width: 500px) {
     header {
-        padding: 10px 10px;
+        padding: 10px 0;
     }
     #header-title p {
         display: none;
