@@ -36,6 +36,7 @@ header, footer{
 .header {
     margin: 0 auto;
     display: flex;
+    padding: 20px;
 }
 .logo-img {
     width: 150px;

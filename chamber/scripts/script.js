@@ -24,7 +24,7 @@ console.log(dayName);
 
 // announcement banner
 if (dayName === "Monday" || dayName === "Tuesday") {
-    document.querySelector(".header").style.paddingTop = "20px";
+    document.querySelector(".header").style.paddingTop = "40px";
 }
 else {
     console.log("Otro dia");
