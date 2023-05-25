@@ -111,7 +111,7 @@ a {
 }
 .post-box {
     border: 1px solid white;
-    background-color: #d6d6d6;
+    background-color: var(--second-color);
 }
 /* hero */
 .hero-post-1 {
@@ -130,7 +130,8 @@ a {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     padding: 0 10px;
     color: var(--header-bg-color);
     text-align: center;
@@ -185,6 +186,67 @@ a {
 .left {
     grid-column: 1/2;
 }
+
+
+/* left 2 weather */
+.left-post-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--header-color);
+}
+.left-post-2 h3 {
+    grid-column: 1/3;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+.left-post-2 img {
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+}
+.weather-degree {
+    margin: auto;
+
+    font-size: 2em;
+}
+.weather-text {
+    grid-column: 1/3;
+    padding: 5px;
+}
+.weather-text p { 
+    margin: 0;
+}
+
+
+/* left 3 */
+.left-post-3 {
+    padding: 15px 5%;
+}
+.join-us {
+    text-align: center;
+    background-color: #273C75;
+    padding: 15px 10px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.2);
+}
+.join-us a {
+    font-size: 1.2em;
+    text-shadow: 2px 2px 3px rgba(21, 195, 248, 1);
+    color: var(--header-color);
+}
+.join-us a:hover {
+    color: var(--header-color);
+    text-shadow: 2px 2px 3px rgba(49, 49, 49, 0.5);
+    font-size: 1.3em;
+    transition: all 0.3s;
+}
+.join-text p {
+    color: var(--header-color);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* right */
 .right {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -235,7 +297,8 @@ a {
 }
 
 
-@media (max-width: 960px) {
+
+@media (max-width: 1200px) {
     /* img and title */
     .logo-img {
         width: 100px;
@@ -327,6 +390,9 @@ a {
     .right-post-3 {
         display: none;
     }
+
+
+    /* left 2 weather */
     .left-post-3 {
         grid-column: 1/3;
         grid-row: 4/5;
@@ -339,6 +405,24 @@ a {
         grid-column: 2/3;
         grid-row: 5/6;
     }
+    .left-post-2 img {
+        width: 50%;
+        padding: 5px;
+        margin: auto;
+    }
+    .weather-text {
+        margin: auto;
+    }
+
+
+    /* sides content */
+    .join-text p {
+        margin-top: 30px;
+        font-size: 1.3em;
+    }
+    
+
+
 
     /* footer */
     footer {
@@ -368,7 +452,7 @@ a {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 760px) {
     header {
         padding: 10px 0;
     }
@@ -427,6 +511,7 @@ a {
         font-size: 0.80em;
     }
 
+    /* Left 2 weather */
     .left-post-1 {
         grid-row: 2/3;
     }
@@ -436,6 +521,17 @@ a {
     .hero-post-2 {
         grid-row: 4/5;
     }
+    
+    .left-post-2 img {
+        width: 25%;
+        padding: 5px;
+        margin: auto;
+    }
+    .weather-text {
+        margin: auto;
+    }
+
+
     .right {
         grid-column: 1/2;
         grid-row: 5/6;
