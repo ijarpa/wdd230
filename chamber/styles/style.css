@@ -7,6 +7,7 @@
     --header-second-color: #F5F6FA;
     --contrast-color: #0097E6;
 	--second-color: #146AAE;
+    --third-color: #52ffb8;
 }
 
 /* announcement banner */
@@ -49,6 +50,15 @@ header, footer{
     margin-top: 10px;
     margin-bottom: 0;
 }
+.header-date {
+    margin: auto;
+    text-align: center;
+    background-color: var(--second-color);
+    padding: 8px;
+    border-radius: 5px;
+    border: var(--contrast-color) 1px solid;
+}
+
 .content h1 {
     font-size: 1.5em;
 }
@@ -80,14 +90,7 @@ nav ul li a:hover {
 .content .header-icons img {
     width: 24px;
 }
-.header-date {
-    margin: auto;
-    text-align: center;
-    background-color: var(--second-color);
-    padding: 0.5em;
-    border-radius: 3px;
-    border: var(--contrast-color) 1px solid;
-}
+
 a {
     text-decoration: none;
 }
@@ -113,6 +116,16 @@ a {
     border: 1px solid white;
     background-color: var(--second-color);
 }
+.post-box h3 {
+    color: var(--third-color);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
+}
+.post-box p {
+    padding: 3px 10px;
+    color: var(--header-color);
+    margin: 0;
+}
+
 /* hero */
 .hero-post-1 {
     grid-column: 2/3;
@@ -132,6 +145,7 @@ a {
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.5);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
     padding: 0 10px;
     color: var(--header-bg-color);
     text-align: center;
@@ -187,17 +201,37 @@ a {
     grid-column: 1/2;
 }
 
+/* left event content */
+.event-content h3 {
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding: 0 15px;
+}
+.event-content p {
+    margin: 15px auto;
+    font-size: 0.8em;
+    text-align: center;
+}
+.event-content a {
+    margin: auto;
+    color: var(--header-color);
+    transition: all 0.3s;
+}
+.event-content a:hover {
+    font-size: 1.2em;
+    transition: all 0.3s;
+}
 
-/* left 2 weather */
+/* left weather */
 .left-post-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: var(--header-color);
 }
 .left-post-2 h3 {
+    margin: 10px 0 0 0;
     grid-column: 1/3;
     text-align: center;
-    margin: 10px 0 0 0;
 }
 .left-post-2 img {
     width: 80%;
@@ -206,15 +240,15 @@ a {
 }
 .weather-degree {
     margin: auto;
-
+    font-size: 2em;
+}
+.weather-degree {
+    align-self: center;
+    justify-self: center;
     font-size: 2em;
 }
 .weather-text {
     grid-column: 1/3;
-    padding: 5px;
-}
-.weather-text p { 
-    margin: 0;
 }
 
 
@@ -224,7 +258,7 @@ a {
 }
 .join-us {
     text-align: center;
-    background-color: #273C75;
+    background-color: var(--third-color);
     padding: 15px 10px;
     border-radius: 25px;
     box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.2);
@@ -232,12 +266,13 @@ a {
 .join-us a {
     font-size: 1.2em;
     text-shadow: 2px 2px 3px rgba(21, 195, 248, 1);
-    color: var(--header-color);
+    color: var(--header-bg-color);
 }
 .join-us a:hover {
-    color: var(--header-color);
+    color: var(--header-second-color);
     text-shadow: 2px 2px 3px rgba(49, 49, 49, 0.5);
     font-size: 1.3em;
+    font-weight: 600;
     transition: all 0.3s;
 }
 .join-text p {
@@ -253,7 +288,7 @@ a {
     grid-column: 3/4;
     grid-row: 1/4;
     padding: 15px;
-    background-color: #d6d6d6;
+    background-color: var(--second-color);
 }
 
 /* Footer */
@@ -374,10 +409,6 @@ a {
         grid-row: 2/3;
     }
 
-    .news-content p {
-        font-size: 0.85em;
-    }
-
     .right {
         grid-column: 1/3;
         grid-row: 3/4;
@@ -408,10 +439,22 @@ a {
     .left-post-2 img {
         width: 50%;
         padding: 5px;
-        margin: auto;
+        margin: 0 5px;
+        align-self: center; 
+        justify-self: end; 
+    }
+    .weather-degree {
+        margin: 0 5px;
+        align-self: center; 
+        justify-self: start; 
     }
     .weather-text {
         margin: auto;
+    }
+
+    /* event */
+    .event-content p {
+        font-size: 1em;
     }
 
 
@@ -523,9 +566,15 @@ a {
     }
     
     .left-post-2 img {
-        width: 25%;
-        padding: 5px;
-        margin: auto;
+        width: 24%;
+        margin: 0 20px;
+        align-self: center; 
+        justify-self: end; 
+    }
+    .weather-degree {
+        margin: 0 20px;
+        align-self: center; 
+        justify-self: start; 
     }
     .weather-text {
         margin: auto;
