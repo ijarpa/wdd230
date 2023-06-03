@@ -58,3 +58,15 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 })
 
+
+// visits counts
+let visits = localStorage.getItem("visits-ls");
+
+if (visits === null) {
+    visits = 0;
+}
+
+document.querySelector(".visit-number").innerHTML = visits;
+localStorage.setItem("visits-ls", Number(visits) + 1);
+
+
