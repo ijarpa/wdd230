@@ -20,14 +20,16 @@
             </a>
         </div>
         <div class="header content">
-            <img class="logo-img" src="images/logo.webp" alt="Logo">
+            <a href="index.html">
+                <img class="logo-img" src="images/logo.webp" alt="Logo">
+            </a>
             <section id="header-title">
                 <h1>Southern Chile</h1>
                 <p>Chamber of Commerce</p>
             </section>
             <nav>
                 <ul class="navigation">
-                    <li> <a href="#">Discover</a></li>
+                    <li> <a href="discover.html">Discover</a></li>
                     <li> <a href="#">Directory</a></li>
                     <li> <a href="#">Join</a></li>
                     <li> <a href="#">Contact</a></li>
@@ -58,9 +60,12 @@
                         <br>
                         Thursday at 1:00 PM
                     </p>
-                    <a href="#">
-                        <p>More info here</p>
-                    </a>
+                    <div class="more-info">
+                        <a href="#">
+                            <p>More info here</p>
+                        </a>
+                    </div>
+
                 </section>
             </div>
             <div class="post-box left left-post-2">
@@ -89,8 +94,12 @@
             <!-- hero -->
             <div class="post-box hero-post-1">
                 <picture>
-                    <source srcset="images/hero-medium.jpg" media="(max-width: 1200px) and (min-width:761px)"/>
-                    <source srcset="images/hero-small.jpg" media="(max-width:760px)" />
+                    <source 
+                        srcset="images/hero-medium.jpg" media="(max-width: 1280px) and (min-width:761px)"
+                    />
+                    <source 
+                        srcset="images/hero-small.jpg" media="(max-width:760px)"
+                    />
                     <img class="hero-img" src="images/hero-large.jpg" alt="hero image"/>
                 </picture>
 
