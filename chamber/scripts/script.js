@@ -60,13 +60,13 @@ hamburger.addEventListener("click", () => {
 
 
 // visits counts
-let visits = localStorage.getItem("visits-ls");
+let lastVisit = localStorage.getItem("last-visit");
 
-if (visits === null) {
-    visits = 0;
-}
+// current timestamp
+let currentTimestamp = Date.now();
 
-document.querySelector(".visit-number").innerHTML = visits;
-localStorage.setItem("visits-ls", Number(visits) + 1);
+let timeDiff = currentTimestamp - lastVisit;
+let daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+document.querySelector(".visit-number").innerHTML = daysDiff;
 
-
+localStorage.setItem("last-visit", currentTimestamp); // Store the current visit time in local storage
