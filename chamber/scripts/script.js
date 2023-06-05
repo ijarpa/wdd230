@@ -22,15 +22,6 @@ document.querySelector(".current-date").textContent = new Date().toLocaleDateStr
 const dayName = date.toLocaleDateString("en-US", { weekday: "long"});
 console.log(dayName);
 
-// announcement banner
-if (dayName === "Monday" || dayName === "Tuesday") {
-    document.querySelector(".header").style.paddingTop = "40px";
-}
-else {
-    console.log("Otro dia");
-    document.querySelector(".announcement").style.display = "none";
-}
-
 
 // Last Updated
 let lastModif = new Date(document.lastModified);
@@ -70,3 +61,12 @@ let daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 document.querySelector(".visit-number").innerHTML = daysDiff;
 
 localStorage.setItem("last-visit", currentTimestamp); // Store the current visit time in local storage
+
+// show first message or visit number
+if (daysDiff === 0) {
+    document.querySelector(".visit-message").innerHTML = "Welcome to Southern Chile Chamber! This is your first visit!";
+}
+else {
+    document.querySelector(".visit-message").style.display = "none";
+    document.querySelector(".second-visit").style.display = "flex";
+}

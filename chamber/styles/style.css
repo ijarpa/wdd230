@@ -425,6 +425,13 @@ a {
     padding-top: 15px;
     margin: 0 auto;
 }
+.first-visit {
+    padding: 5px;
+    font-size: 1.4em;
+}
+.second-visit {
+    display: none;
+}
 
 
 @media (max-width: 1280px) {
