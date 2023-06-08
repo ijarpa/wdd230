@@ -7,13 +7,13 @@ body {
 
 main {
     max-width: 800px;
-    margin: 200px auto 0;
-    padding: 20px;
+    padding: 100px;
     margin: auto;
 }
   
 table {
     width: 100%;
+    margin-top: 400px;
     border-collapse: collapse;
     margin: 0 auto;
 }
