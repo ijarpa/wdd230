@@ -211,7 +211,7 @@ a {
     padding: 0 10px;
 }
 .event-content p {
-    margin: 10px auto;
+    margin: 20px auto;
     font-size: 1em;
     text-align: center;
 }
@@ -260,6 +260,7 @@ a {
 }
 .weather-text {
     grid-column: 1/3;
+    text-align: center;
 }
 
 
@@ -302,6 +303,26 @@ a {
     grid-row: 1/4;
     padding: 15px;
     background-color: var(--second-color);
+}
+.spotlight-content h3 {
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding: 0 10px;
+    color: #fdfdfd;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+}
+.spotlight-content p {
+    text-align: center;
+    margin: 50px 0 0 0;
+    padding: 0 10px;
+    color: var(--header-second-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+}
+.spotlight-content .spotlight-date p {
+    margin: 20px;
+    text-align: center;
+    color: #ffee00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
 }
 
 /* Footer */
@@ -499,6 +520,66 @@ a {
     text-shadow: 5px 5px 5px rgba(161, 161, 161, 0.4);
 }
 
+/* ######################################################################## */
+/* DISCOVERY PAGE */
+main section h2 {
+    margin: 30px auto;
+    text-align: center;
+    font-size: 3em;
+    color: var(--header-bg-color);
+    text-transform: uppercase;
+}
+.container{
+	max-width: 1400px;
+	margin: auto;
+	width: 100%;
+}
+.post-directory {
+    margin: 40px auto;
+    width: 90%;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: center;
+	gap: 1.5rem;
+}
+.post-box-directory {
+	background-color: var(--bg-color);
+	box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+	border-radius: 0.5rem;
+	padding: 15px;
+}
+.post-img{
+	width: 100%;
+	height: 300px;
+	object-fit:contain;	
+	object-position: center;
+}
+.company-name {
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--second-color);
+}
+.post-description{
+	line-height: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--header-bg-color);
+	margin: 5px 0 10px;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+    text-align: justify;
+    margin: 30px 0;
+}
+.post-text {
+    color: var(--header-bg-color);
+    margin-top: 10px;
+}
+.post-box-directory h3 {
+    font-size: 1.3em;
+    color: var(--contrast-color);
+}
 
 
 /* ######################################################################## */
@@ -537,6 +618,7 @@ a {
         border: none;
         font-size: 2rem;
         cursor: pointer;
+        z-index: 200;
     }
     .navigation.active {
         left: 0;
@@ -621,10 +703,25 @@ a {
     .weather-text {
         margin: auto;
     }
+    .event-content p {
+        margin: 10px;
+    }
+    .more-info {
+        padding: 5px;
+        margin: 0 20px;
+    }
 
     /* event */
     .event-content p {
         font-size: 1em;
+    }
+
+    .spotlight-content p {
+        margin: 20px 0 0 0;
+        padding: 0 10px;
+    }
+    .spotlight-content .spotlight-date p {
+        margin: 10px;
     }
 
 
@@ -684,6 +781,16 @@ a {
     }
     .forms input, textarea, select{
         padding: 10px;
+    }
+
+
+
+    /* ######################################################################## */
+    /* DISCOVERY PAGE */
+    .post-directory{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
     }
 }
 
@@ -775,6 +882,11 @@ a {
         margin: auto;
     }
 
+    /* left 3*/
+    .left-post-3 {
+        display: none;
+    }
+
 
     .right {
         grid-column: 1/2;
@@ -843,5 +955,12 @@ a {
         font-size: 1em;
     }
 
+    /* ######################################################################## */
+    /* DISCOVERY PAGE */
+    .post-directory{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
 
 }
