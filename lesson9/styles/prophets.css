@@ -15,20 +15,21 @@
     color: #fff;
     text-align: center;
     padding: 20px;
-    position: fixed;
     width: 100%;
-    margin-top: -150px;
   }
   
   /* Main */
   main {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 20px auto;
   }
+
   .cards {
-    margin: 150px auto;
-    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
     text-align: center;
+    padding: 10px 20px;
   }
 
   .cards img {
@@ -36,6 +37,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     margin: 10px;
+    object-fit: cover;
   }
 
   .portrait {
@@ -52,5 +54,20 @@
     color: #fff;
     text-align: center;
     padding: 20px;
+  }
+
+
+  @media (max-width: 1200px) {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 780px) {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   
