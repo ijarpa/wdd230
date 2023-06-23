@@ -1,4 +1,8 @@
 const jsonData = 'data.json';
+const listButton = document.querySelector('.button-list');
+const gridButton = document.querySelector('.button-grid');
+const postDirectory = document.querySelector('.post-directory');
+
 
 // Json table in console
 async function showData() {
@@ -14,47 +18,55 @@ const companiesInformation = (companies) => {
     const companiesContainer = document.querySelector('.post-directory');
 
     companies.forEach(company => {
-        // Create html elements
         const postBox = document.createElement('div');
-        const postImg = document.createElement('img');
-        const name = document.createElement('h2');
-        const companyDescription = document.createElement('p');
-        const companySpecialization = document.createElement('p');
-        const companyaddress = document.createElement('p');
-        const companyphone = document.createElement('p');
-        const companywebsite = document.createElement('p');
-        const companyMembership = document.createElement('h3');
 
-        // Add classes
-        postBox.classList.add('post-box-directory');
-        postImg.classList.add('post-img');
-        name.classList.add('company-name');
-        companyDescription.classList.add('post-description');
-        companySpecialization.classList.add('post-text');
-        companyaddress.classList.add('post-text');
-        companyphone.classList.add('post-text');
-        companywebsite.classList.add('post-text');
 
-        // Add content
-        name.textContent = company.name;
-        postImg.setAttribute('src', 'images/' + company.image);
-        companyDescription.textContent = company.description;
-        companySpecialization.textContent = 'Specialization: ' + company.specialization;
-        companyaddress.textContent = 'Address: ' + company.address;
-        companyphone.textContent = 'Phone: ' + company.phone;
-        companywebsite.textContent = 'Website: ' + company.website;
-        companyMembership.textContent = 'Membership: ' + company.membership_level;
+        listButton.addEventListener('click', () => {
 
-        // Append elements
-        postBox.appendChild(postImg);
-        postBox.appendChild(name);
-        postBox.appendChild(companyDescription);
-        postBox.appendChild(companySpecialization);
-        postBox.appendChild(companyaddress);
-        postBox.appendChild(companyphone);
-        postBox.appendChild(companywebsite);
-        postBox.appendChild(companyMembership);
+            postDirectory.classList.remove('post-directory');
+            postDirectory.classList.add('post-directory-list');
+
+            postBox.classList.remove('post-box-directory');
+            postBox.classList.add('post-box-directory-list');
+
+            postBox.innerHTML = `
+            <img src="images/${company.image}" alt="" class="post-img-list">
+            <h2 class="company-name-list">${company.name}</h2>
+            <p class="post-description">${company.description}</p>
+            <h3 class="post-text-membership-list">${company.membership_level}</h3>
+            <p class="blank"></p>
+            <div class="post-discovery-text-list" >
+                <p class="post-text">Specialization: ${company.specialization}</p>
+                <p class="post-text">${company.address}</p>
+                <p class="post-text">${company.phone}</p>
+                <p class="post-text">${company.website}</p>
+            </div>
+            `
+        }
+        );
+
+        gridButton.addEventListener('click', () => {
+
+            postDirectory.classList.remove('post-directory-list');
+            postDirectory.classList.add('post-directory');
+
+            postBox.classList.remove('post-box-directory-list');
+            postBox.classList.add('post-box-directory');
+
+            postBox.innerHTML = `
+            <img src="images/${company.image}" alt="" class="post-img">
+            <h2 class="company-name">${company.name}</h2>
+            <p class="post-description">${company.description}</p>
+            <p class="post-text">${company.specialization}</p>
+            <p class="post-text">${company.address}</p>
+            <p class="post-text">${company.phone}</p>
+            <p class="post-text">${company.website}</p>
+            <h3 class="post-text">${company.membership_level}</h3>
+            `
+        }
+        );
 
         companiesContainer.appendChild(postBox);
     });
+    gridButton.click();
 }
