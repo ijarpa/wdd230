@@ -532,10 +532,10 @@ main section h2 {
 .container{
 	max-width: 1400px;
 	margin: auto;
-	width: 100%;
+
 }
 .post-directory {
-    margin: 40px auto;
+    margin: auto;
     width: 90%;
 	display: grid;
 	grid-template-columns: repeat(3, auto);
@@ -581,6 +581,45 @@ main section h2 {
     color: var(--contrast-color);
 }
 
+.list-format .post-box-directory .post-img {
+    display: none;
+}
+
+/* discovery list */
+.post-directory-list {
+    margin: auto;
+    width: 90%;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: center;
+}
+.post-box-directory-list {
+	background-color: var(--bg-color);
+	box-shadow: none;
+	border-radius: 0px;
+	padding: 15px;
+}
+.post-img-list {
+    display: none;
+}
+
+.button-discover {
+    padding: 20px;
+    text-align: center;
+}
+.button-discover button {
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #0097E6;
+    width: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    color: var(--header-second-color);
+    border: 1px solid var(--contrast-color)
+}
+.button-discover button:hover {
+    opacity: .6;
+}
 
 /* ######################################################################## */
 /* MEDIUM STYLE */

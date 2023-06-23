@@ -58,5 +58,3 @@ const companiesInformation = (companies) => {
         companiesContainer.appendChild(postBox);
     });
 }
-
-
