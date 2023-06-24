@@ -32,7 +32,7 @@ header, footer{
 	color: #fff;
 }
 .content {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 .header {
@@ -186,7 +186,7 @@ a {
 
 .news-content h2 {
     text-align: center;
-    margin: auto;
+    margin: 10px auto;
     padding: 5px;
     color: var(--header-color);
     text-shadow: 0px 0px 10px rgba(85, 85, 85, 0.4);
@@ -468,6 +468,8 @@ a {
 .form-title {
     margin: 30px auto;
     text-align: center;
+}
+.form-title h2 {
     font-size: 2em;
 }
 .form-content {
@@ -532,10 +534,14 @@ a {
 main section h2 {
     margin: 30px auto;
     text-align: center;
-    font-size: 3em;
     color: var(--header-bg-color);
     text-transform: uppercase;
 }
+.discover-info section h2 {
+    font-size: 1em;
+    text-align: start;
+}
+
 .container{
 	max-width: 1400px;
 	margin: auto;
@@ -638,6 +644,41 @@ main section h2 {
 .button-discover button:hover {
     opacity: .6;
 }
+
+
+/* ######################################################################## */
+/* CONTACT PAGE */
+.contact h2 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--header-bg-color);
+}
+.contact p {
+    text-align: center;
+    font-size: 1.2em;
+}
+.contact form {
+    max-width: 800px;
+    display: grid;
+    margin: 20px auto;
+    padding: 20px;
+}
+.contact form button {
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+.contact table {
+    margin: 30px auto;
+}
+.contact th, td {
+    font-size: 1.2em;
+    padding: 5px;
+}
+.contact-info th {
+    text-align: start;
+}
+
 
 /* ######################################################################## */
 /* MEDIUM STYLE */
@@ -1081,4 +1122,10 @@ main section h2 {
         text-align: left;
     }
 
+    /* ######################################################################## */
+    /* CONTACT PAGE */
+    .contact th, td {
+        font-size: 1em;
+        padding: 5px;
+    }
 }
