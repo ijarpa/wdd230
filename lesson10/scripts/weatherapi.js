@@ -1,6 +1,6 @@
 const api_url = 'https://api.openweathermap.org/data/2.5';
-const lat = -41.46885933722645;
-const lon = -72.9438125004234;
+const lat = 64.8378;
+const lon = -147.7164;
 const api_key = '069a3667af0a632c367191f8e73aa6df';
 
 const api_url_full = `${api_url}/weather?lat=${lat}&lon=${lon}&appid=${api_key}`
@@ -24,8 +24,9 @@ const weatherData = (data) => {
 
     // TEMPERATURE
     const currentTempKelvin = data.main.temp;
-    const currentTempCelcius = Math.round(currentTempKelvin - 273.15);
-    document.querySelector('#current-temp').textContent = currentTempCelcius;
+    const currentTempFahrenheit = Math.round(currentTempKelvin * 9/5 - 459.67);
+    // const currentTempCelcius = Math.round(currentTempKelvin - 273.15);
+    document.querySelector('#current-temp').textContent = currentTempFahrenheit;
 
     // ICON
     const weather_icon = document.querySelector('#weather-icon');
