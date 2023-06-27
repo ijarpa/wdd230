@@ -31,7 +31,7 @@ const weatherData = (data) => {
     const weather_icon = document.querySelector('#weather-icon');
     const icon_weather = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
     weather_icon.setAttribute('src', icon_weather);
-    weather_icon.setAttribute('width', '100px');
+    // weather_icon.setAttribute('width', '50px');
 
     // DESCRIPTION
     document.querySelector('#weather-description').textContent = data.weather[0].description;
