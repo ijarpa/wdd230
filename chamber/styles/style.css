@@ -683,7 +683,7 @@ main section h2 {
 
 /* ######################################################################## */
 /* MEDIUM STYLE */
-@media (max-width: 1460px) {
+@media (max-width: 1360px) {
     /* img and title */
     .logo-img {
         width: 100px;
