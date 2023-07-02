@@ -48,3 +48,14 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 })
+
+window.addEventListener('scroll', function() {
+    var navigation = document.querySelector('.navigation');
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPosition > 40) {
+        navigation.classList.add('fixed-navigation');
+    } else {
+        navigation.classList.remove('fixed-navigation');
+    }
+});
