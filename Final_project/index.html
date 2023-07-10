@@ -7,6 +7,7 @@
   <title>Bountiful Bites Express</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="images/favicon.ico">
 </head>
 
@@ -60,7 +61,7 @@
             </a>
         </div>
         <hr class="line">
-        <section>
+        <section class="container">
             <h2 class="section-title">Special offers this week</h2>
             <section class="food-section">
                 <div class="food-box">
@@ -89,7 +90,7 @@
     <hr class="line">
     <h2 class="section-title">Visit us and enjoy these beautiful places!</h2>
     <section class="locations">
-        <img src="images/loc_carlsbad.jpg" alt="carlsbad image" class="location-img">
+        <img src="images/loc_carlsbad.jpg" alt="carlsbad image" class="location-img img-post-1">
         <!-- Location 1 -->
         <section class="info-text info-position-1">
             <h2>carlsbad</h2>
@@ -120,7 +121,7 @@
             </div>
         </section>
         <!-- Location 2 -->
-        <img src="images/loc_losangeles.jpg" alt="Los Angeles image" class="location-img">
+        <img src="images/loc_losangeles.jpg" alt="Los Angeles image" class="location-img img-post-2">
         <section class="info-text info-position-2">
             <h2>Los Angeles</h2>
             <h3>Weather</h3>
@@ -149,10 +150,91 @@
                 </section>
             </div>
         </section>
-
         <!-- Location 3 -->
-        <img src="images/loc_sandiego.jpg" alt="San Diego image" class="location-img">
+        <img src="images/loc_sandiego.jpg" alt="San Diego image" class="location-img img-post-3">
+        <section class="info-text info-position-3">
+            <h2>San Diego</h2>
+            <h3>Weather</h3>
+            <div class="weather-content">
+                <section class="today">
+                    <div class="weather">
+                        <img id="weather-icon-SD" src="" alt="weather icon">
+                        <p><span id="current-temp-SD"></span> °C</p>
+                    </div>
+                    <div class="weather">
+                        <p><span id="weather-description_SD"></span></p>
+                    </div>
+                </section>
+                <div class="sep"></div>
+                <section class="forecast">
+                    <div class="weather">
+                        <img id="weather-icon-tomorrowSD" src="" alt="weather icon">
+                        <p><span id="tomorrow-tempSD"></span>°C</p>
+                    </div>
+                    <p><span class="tomorrow-day"></span></p>
+                    <div class="weather">
+                        <img id="weather-icon-afterTomorrowSD" src="" alt="weather icon">
+                        <p><span id="tomorrow-afterTempSD"></span>°C</p>
+                    </div>
+                    <p><span class="after-tomorrow-day"></span></p>
+                </section>
+            </div>
+        </section>
+    </section>
 
+    <!-- Customers -->
+    <section class="customer-review">
+        <!-- post 1 -->
+        <section class="post-review-1">
+            <div class="review-name">
+                <h3>Robert Miles</h3>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+            <section class="review-content">
+                <img src="images/customer_1.png" alt="review img">
+                <p>"Absolutely love the organic fruits and produce from Bountiful Foods! 
+                    As a health-conscious individual, I appreciate their commitment to 
+                    sourcing locally grown, fresh ingredients. The quality of the fruits I 
+                    received was outstanding, and the flavors were incredibly vibrant. 
+                    It's reassuring to know that I'm supporting local farmers and enjoying 
+                    nutritious food at the same time. I highly recommend Bountiful Foods to 
+                    anyone looking for a convenient and reliable source of organic goodness."
+                </p>
+            </section>
+        </section>
+
+        <!-- post 2 -->
+        <section class="post-review-2">
+            <div class="review-name-2">
+                <h3>Amanda Martinez</h3>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+            </div>
+            <section class="review-content">
+                <p>"I can't get enough of the delicious made-to-order fruit drinks from 
+                    Bountiful Foods! Not only are they incredibly refreshing, but they 
+                    also use high-quality ingredients that make each sip a true delight. 
+                    I love the customizable options, allowing me to choose my favorite 
+                    fruits and create my own flavor combinations. Whether I'm on the 
+                    go or simply enjoying a relaxing day at home, Bountiful Foods' 
+                    fruit drinks are my go-to choice. They're the perfect blend of 
+                    taste and health, and I can't recommend them enough to all the fruit 
+                    lovers out there!"
+                </p>
+                <img src="images/customer_2.png" alt="review img">
+            </section>
+        </section>
     </section>
   </main>
 
