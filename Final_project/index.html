@@ -17,8 +17,8 @@
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
+          <li><a href="#">Fresh</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
         </ul>
       </nav>
@@ -42,6 +42,23 @@
 
   <main>
     <div class="main container">
+        <div class="entertaiment">
+            <a href="#">
+                <img src="images/entertainment_1.png" alt="">
+            </a>
+            <a href="#">
+                <img src="images/entertainment_2.png" alt="">
+            </a>
+            <a href="#">
+                <img src="images/entertainment_3.png" alt="">
+            </a>
+            <a href="#">
+                <img src="images/entertainment_4.png" alt="">
+            </a>
+            <a href="#">
+                <img src="images/entertainment_5.png" alt="">
+            </a>
+        </div>
         <hr class="line">
         <section>
             <h2 class="section-title">Special offers this week</h2>
@@ -73,32 +90,69 @@
     <h2 class="section-title">Visit us and enjoy these beautiful places!</h2>
     <section class="locations">
         <img src="images/loc_carlsbad.jpg" alt="carlsbad image" class="location-img">
+        <!-- Location 1 -->
         <section class="info-text info-position-1">
             <h2>carlsbad</h2>
             <h3>Weather</h3>
-            <div class="weather">
-                <img class="weather-icon" src="" alt="weather icon">
-                <p>degrees</p>
+            <div class="weather-content">
+                <section class="today">
+                    <div class="weather">
+                        <img id="weather-icon" src="" alt="weather icon">
+                        <p><span id="current-temp"></span> °C</p>
+                    </div>
+                    <div class="weather">
+                        <p><span id="weather-description"></span></p>
+                    </div>
+                </section>
+                <div class="sep"></div>
+                <section class="forecast">
+                    <div class="weather">
+                        <img id="weather-icon-tomorrow" src="" alt="weather icon">
+                        <p><span id="tomorrow-temp-Max"></span>/<span id="tomorrow-temp-Min"></span>°C</p>
+                    </div>
+                    <p><span class="tomorrow-day"></span></p>
+                    <div class="weather">
+                        <img id="weather-icon-afterTomorrow" src="" alt="weather icon">
+                        <p><span id="tomorrow-afterTemp-Max"></span>/<span id="tomorrow-afterTemp-Min"></span>°C</p>
+                    </div>
+                    <p><span class="after-tomorrow-day"></span></p>
+                </section>
             </div>
         </section>
+        <!-- Location 2 -->
         <img src="images/loc_losangeles.jpg" alt="Los Angeles image" class="location-img">
         <section class="info-text info-position-2">
             <h2>Los Angeles</h2>
             <h3>Weather</h3>
-            <div class="weather">
-                <img class="weather-icon" src="" alt="weather icon">
-                <p>degrees</p>
+            <div class="weather-content">
+                <section class="today">
+                    <div class="weather">
+                        <img id="weather-icon-LA" src="" alt="weather icon">
+                        <p><span id="current-temp-LA"></span> °C</p>
+                    </div>
+                    <div class="weather">
+                        <p><span id="weather-description_LA"></span></p>
+                    </div>
+                </section>
+                <div class="sep"></div>
+                <section class="forecast">
+                    <div class="weather">
+                        <img id="weather-icon-tomorrowLA" src="" alt="weather icon">
+                        <p><span id="tomorrow-tempLA"></span>°C</p>
+                    </div>
+                    <p><span class="tomorrow-day"></span></p>
+                    <div class="weather">
+                        <img id="weather-icon-afterTomorrowLA" src="" alt="weather icon">
+                        <p><span id="tomorrow-afterTempLA"></span>°C</p>
+                    </div>
+                    <p><span class="after-tomorrow-day"></span></p>
+                </section>
             </div>
         </section>
+
+        <!-- Location 3 -->
         <img src="images/loc_sandiego.jpg" alt="San Diego image" class="location-img">
-        <section class="info-text info-position-3">
-            <h2>San Diego</h2>
-            <h3>Weather</h3>
-            <div class="weather">
-                <img class="weather-icon" src="" alt="weather icon">
-                <p>degrees</p>
-            </div>
-        </section>
+
     </section>
   </main>
 
@@ -131,6 +185,7 @@
     </div>
   </footer>
   <script src="scripts/script.js"></script>
+  <script src="scripts/scriptWeather.js"></script>
 </body>
 
 </html>

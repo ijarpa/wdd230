@@ -13,7 +13,12 @@ body {
     font-family: var(--font-family);
     background-color: var(--background-color);
 }
-
+h2 {
+    color: var(--primary-color);
+}
+h3 {
+    color: var(--secondary-color);
+}
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -46,7 +51,7 @@ header.shadow {
 }
 
 .name {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -60,6 +65,7 @@ nav ul {
 nav a {
     text-decoration: none;
     color: white;
+    font-size: 20px;
 }
 
 .social-buttons img {
@@ -90,15 +96,23 @@ nav a {
     left: 50%;
     transform: translate(-50%, -50vh);
     max-width: 350px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
   
 /* Main Section */
 main {
-    margin-top: -220px;
+    margin-top: -320px;
     padding: 0 0 40px 0;
 }
-
+.entertaiment {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.entertaiment img {
+    width: 40%;
+}
 .line {
     height: 2px;
     width: 20%;
@@ -176,13 +190,13 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-115px, 110vh);
+    transform: translate(-50%, 115vh);
 }
 .info-position-2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-115px, 150vh);
+    transform: translate(-50%, 156vh);
 }
 .info-position-3 {
     position: absolute;
@@ -196,12 +210,11 @@ main {
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(207, 207, 207, 0.1);
     text-align: center;
-    width: 200px;
+    width: 300px;
 }
 .info-text h2 {
     text-transform: uppercase;
     margin: 0 auto;
-    color: var(--primary-color);
 }
 .info-text h3, p {
     margin: 0 auto;
@@ -209,6 +222,31 @@ main {
 }
 .weather {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-content {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+}
+.weather p {
+    margin: 0;
+}
+.weather-description {
+    text-transform: uppercase;
+}
+.sep {
+    background-color: var(--secondary-color);
+    margin: 7px 0;
+}
+.forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: end;
+}
+.forecast .weather {
+    margin-right: 5px;
 }
 
 /* Footer */
@@ -242,6 +280,7 @@ footer {
 
 .contact-info p {
     margin: 0;
+    font-size: 18px;
 }
 
 .social-media img {
