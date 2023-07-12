@@ -172,7 +172,6 @@ main {
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
     width: 100%;
-
     align-items: center;
     justify-content:center;
 }
@@ -182,14 +181,21 @@ main {
     object-fit: cover;
     object-position: center;
     filter: brightness(40%);
+}
+.loc-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     transition: 0.4s;
 }
-.location-img:hover {
-    width: 110%;
+.loc-container:hover {
+    scale: 103%;
+    transition: 0.4s;
+}
+.loc-container img:hover {
     filter: brightness(80%);
-    transition: 0.4s;
+    transition: 0.4s; 
 }
-
 /* Post 1 */
 .img-post-1 {
     grid-column: 1/2;
